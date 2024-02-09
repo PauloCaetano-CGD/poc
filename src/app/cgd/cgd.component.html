@@ -1,0 +1,23 @@
+<main>
+    <header class="brand-name">
+      <img class="brand-logo" src="http://localhost:8080/cdo/private/assets/logo.png" alt="logo" aria-hidden="true" width="100">
+    </header>
+    <section class="content">
+      <h3 *ngIf="!this.isTextHidden">Angular App is working</h3>
+      <button class="primary" type="button" (click)="this.isTextHidden=!this.isTextHidden">Hide Text</button>
+      <form>
+        <input type="text" placeholder="Search with filter" #filter>
+        <button class="primary" type="button">Search</button>
+      </form>
+    </section>
+    <section *ngIf="example">
+      <h4>{{ example.message }}</h4>
+    </section>
+    <section *ngIf="submitSession">
+      <h4>{{ submitSession }}</h4>
+    </section>
+    <section *ngIf="clientContent">
+      <h4>{{ clientContent | json }}</h4>
+    </section>
+  </main>
+  
